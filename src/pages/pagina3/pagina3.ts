@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the Pagina3Page page.
@@ -14,11 +14,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina3Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  mutante:any = {};
+
+  constructor(public navParams: NavParams) {
+    console.log(navParams);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Pagina3Page');
+    this.mutante = this.navParams.get("mutante");
   }
 
 }
